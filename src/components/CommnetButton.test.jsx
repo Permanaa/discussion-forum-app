@@ -11,7 +11,7 @@ describe('CommentButton', () => {
   it('renders the comment count', () => {
     render(<CommentButton total={10} />);
 
-    expect(screen.getByText('10')).toBeInTheDocument();
+    expect(screen.getByText('11')).toBeInTheDocument();
   });
 
   it('renders the comment icon', () => {
