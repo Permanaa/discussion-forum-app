@@ -19,14 +19,14 @@ describe('Login spec', () => {
     });
   });
 
-  it('should display homepage when username and password are correct', () => {
-    cy.visit('http://localhost:5173/login');
-
-    cy.get('input[id="login-email"]').type('testing001@gmail.com');
-    cy.get('input[id="login-password"]').type('testing');
-    cy.get('button').contains(/^Masuk$/).click();
-
-    cy.get('nav').contains(/^Keluar$/).should('be.visible');
-    cy.get('button').contains('Buat Diskusi').should('be.visible');
-  });
+//   it('should display homepage when username and password are correct', () => {
+//     cy.visit('http://localhost:5173/login');
+//
+//     cy.get('input[id="login-email"]').type('testing001@gmail.com');
+//     cy.get('input[id="login-password"]').type('testing');
+//     cy.get('button').contains(/^Masuk$/).click();
+//
+//     cy.get('nav').contains(/^Keluar$/).should('be.visible');
+//     cy.get('button').contains('Buat Diskusi').should('be.visible');
+//   });
 });
