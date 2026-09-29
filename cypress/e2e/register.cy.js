@@ -1,3 +1,11 @@
+/**
+ * - Register spec
+ *   - should display register page correctly
+ *   - should display alert when password doesnt match
+ *   - should display alert when password length less than 6
+ *
+ */
+
 describe('Register spec', () => {
   it('should display register page correctly', () => {
     cy.visit('http://localhost:5173/register');

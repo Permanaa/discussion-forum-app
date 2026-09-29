@@ -1,3 +1,9 @@
+/**
+ * - Login spec
+ *   - should display login page correctly
+ *   - should display alert when username and password are wrong
+ */
+
 describe('Login spec', () => {
   it('should display login page correctly', () => {
     cy.visit('http://localhost:5173/login');
