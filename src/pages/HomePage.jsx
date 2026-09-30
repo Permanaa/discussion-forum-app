@@ -12,6 +12,7 @@ import { useState } from 'react';
 function HomePage() {
   const threads = useSelector((states) => states.threads);
   const users = useSelector((states) => states.users);
+  const authUser = useSelector((states) => states.authUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -101,6 +102,7 @@ function HomePage() {
             <ThreadItem
               key={thread.id}
               {...thread}
+              authUser={authUser}
               owner={users[thread.ownerId]}
               onUpVoteThread={onUpVoteThread}
               onDownVoteThread={onDownVoteThread}

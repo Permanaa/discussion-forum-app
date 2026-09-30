@@ -18,13 +18,13 @@ function RegisterPage() {
   async function onRegisterHandler(event) {
     event.preventDefault();
 
-    if (password !== confirmPass) {
-      alert('Password tidak sama!');
+    if (password.length < 6) {
+      alert('Password setidaknya 6 karakter!');
       return;
     }
 
-    if (password.length < 6) {
-      alert('Password setidaknya 6 karakter!');
+    if (password !== confirmPass) {
+      alert('Password tidak sama!');
       return;
     }
 
