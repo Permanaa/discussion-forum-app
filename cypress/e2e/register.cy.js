@@ -14,7 +14,9 @@ describe('Register spec', () => {
     cy.get('input[id="register-email"]').should('be.visible');
     cy.get('input[id="register-password"]').should('be.visible');
     cy.get('input[id="register-confirm-password"]').should('be.visible');
-    cy.get('button').contains(/^Daftar/).should('be.visible');
+    cy.get('button')
+      .contains(/^Daftar/)
+      .should('be.visible');
   });
 
   it('should display alert when password doesnt match', () => {
@@ -24,7 +26,9 @@ describe('Register spec', () => {
     cy.get('input[id="register-email"]').type('testing@email.com');
     cy.get('input[id="register-password"]').type('password');
     cy.get('input[id="register-confirm-password"]').type('doesnt_match');
-    cy.get('button').contains(/^Daftar/).click();
+    cy.get('button')
+      .contains(/^Daftar/)
+      .click();
 
     cy.on('window:alert', (str) => {
       expect(str).to.equal('Password tidak sama!');
@@ -38,7 +42,9 @@ describe('Register spec', () => {
     cy.get('input[id="register-email"]').type('testing@email.com');
     cy.get('input[id="register-password"]').type('pass');
     cy.get('input[id="register-confirm-password"]').type('pass');
-    cy.get('button').contains(/^Daftar/).click();
+    cy.get('button')
+      .contains(/^Daftar/)
+      .click();
 
     cy.on('window:alert', (str) => {
       expect(str).to.equal('Password setidaknya 6 karakter!');

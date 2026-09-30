@@ -15,11 +15,15 @@ Cypress.Commands.add('login', (email, password) => {
 
   cy.get('input[id="login-email"]').type(email);
   cy.get('input[id="login-password"]').type(password);
-  cy.get('button').contains(/^Masuk$/).click();
+  cy.get('button')
+    .contains(/^Masuk$/)
+    .click();
 
-  cy.get('nav').contains(/^Keluar$/).should('be.visible');
+  cy.get('nav')
+    .contains(/^Keluar$/)
+    .should('be.visible');
   cy.get('button').contains('Buat Diskusi').should('be.visible');
-})
+});
 //
 //
 // -- This is a child command --

@@ -31,6 +31,6 @@ export default defineConfig([
       'react-hooks/exhaustive-deps': 'warn',
       'react/jsx-props-no-spreading': 'off'
     },
-    pluginCypress.configs.recommended
-  }
+  },
+  pluginCypress.configs.recommended
 ]);

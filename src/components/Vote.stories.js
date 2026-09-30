@@ -1,5 +1,5 @@
-import { fn } from "storybook/test";
-import Vote from "./Vote";
+import { fn } from 'storybook/test';
+import Vote from './Vote';
 
 export default {
   title: 'Vote',
@@ -8,29 +8,29 @@ export default {
   args: {
     onUpVote: fn(),
     onDownVote: fn(),
-  }
-}
+  },
+};
 
 export const Default = {
   args: {
     total: 10,
     isUpVote: false,
-    isDownVote: false
-  }
-}
+    isDownVote: false,
+  },
+};
 
 export const UpVote = {
   args: {
     total: 10,
     isUpVote: true,
-    isDownVote: false
-  }
-}
+    isDownVote: false,
+  },
+};
 
 export const DownVote = {
   args: {
     total: 10,
     isUpVote: false,
-    isDownVote: true
-  }
-}
+    isDownVote: true,
+  },
+};
